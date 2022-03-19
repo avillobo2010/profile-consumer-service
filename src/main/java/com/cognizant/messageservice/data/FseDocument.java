@@ -13,7 +13,6 @@ import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
-import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -27,10 +26,10 @@ public class FseDocument implements Serializable {
 	private String userid;
 
 	@DynamoDBAttribute
-	private String name;
+	private String associateName;
 
 	@DynamoDBAttribute
-	private String id;
+	private String associateId;
 
 	@DynamoDBAttribute
 	private String mobile;
@@ -51,7 +50,5 @@ public class FseDocument implements Serializable {
 	@JsonDeserialize(using = LocalDateTimeDeserializer.class)
 	private LocalDateTime lastUpdatedDateTime;
 
-	@DynamoDBAttribute
-	private List<SkillDocument> skills;
 
 }
