@@ -13,7 +13,7 @@ phases:
 
 artifacts:
   files:
-    - appspec_pcs.yml
+    - appspec.yml
     - target/*.jar
     - build/libs/*.jar
     - scripts/*.sh
