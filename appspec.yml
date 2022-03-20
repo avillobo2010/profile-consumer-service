@@ -2,17 +2,17 @@ version: 0.0
 os: linux
 files:
 - source: /
-  destination: /home/ec2-user/deployments
+  destination: /home/ec2-user/
 hooks:
   AfterInstall:
-  - location: fix_previleges_pcs.sh
+  - location: fix_previleges.sh
     timeout: 300
     runas: root
   ApplicationStart:
-  - location: start_server_pcs.sh
+  - location: start_server.sh
     timeout: 300
     runas: root
   ApplicationStop:
-  - location: stop_server_pcs.sh
+  - location: stop_server.sh
     timeout: 300
     runas: root
